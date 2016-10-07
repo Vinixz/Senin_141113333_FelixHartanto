@@ -7,3 +7,6 @@ C:\Users\FELIXHT\Desktop\Mikroskil\Semester 5\Pemograman Framework Lanjutan\Tuga
 C:\Users\FELIXHT\Desktop\Mikroskil\Semester 5\Pemograman Framework Lanjutan\Tugas\Senin_141113333_FelixHartanto\Latihan_1_1\bin\Debug\Latihan_1_1.pdb
 C:\Users\FELIXHT\Desktop\Mikroskil\Semester 5\Pemograman Framework Lanjutan\Tugas\Senin_141113333_FelixHartanto\Latihan_1_1\obj\Debug\Latihan_1_1.exe
 C:\Users\FELIXHT\Desktop\Mikroskil\Semester 5\Pemograman Framework Lanjutan\Tugas\Senin_141113333_FelixHartanto\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
