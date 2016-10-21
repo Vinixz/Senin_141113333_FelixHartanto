@@ -59,15 +59,18 @@ namespace Latihan_3_1
                 }
                 else if (sfont == "bold")
                 {
+                    System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     for (int i = ustart; i < ustart + ulength; i++)
                     {
                         rtbNotepad.Focus();
                         rtbNotepad.Select(i, length1);
 
-                        System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
+                        System.Drawing.Font startFont = rtbNotepad.SelectionFont;
+
                         System.Drawing.FontStyle newFont = currentFont.Bold == false ? FontStyle.Bold : FontStyle.Regular;
-                        newFont |= currentFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
-                        newFont |= currentFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
+
+                        newFont |= startFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
+                        newFont |= startFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
 
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                     newFont);
@@ -75,15 +78,18 @@ namespace Latihan_3_1
                 }
                 else if (sfont == "italic")
                 {
+                    System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     for (int i = ustart; i < ustart + ulength; i++)
                     {
                         rtbNotepad.Focus();
                         rtbNotepad.Select(i, length1);
+
+                        System.Drawing.Font startFont = rtbNotepad.SelectionFont;
                         
-                         System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
-                        System.Drawing.FontStyle newFont = currentFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
-                        newFont |= currentFont.Italic == false ? FontStyle.Italic : FontStyle.Regular;
-                        newFont |= currentFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
+                        System.Drawing.FontStyle newFont = currentFont.Italic == false ? FontStyle.Italic : FontStyle.Regular;
+
+                        newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
+                        newFont |= startFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
 
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                     newFont);
@@ -91,14 +97,19 @@ namespace Latihan_3_1
                 }
                 else if (sfont == "underline")
                 {
+                    System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     for (int i = ustart; i < ustart + ulength; i++)
                     {
                         rtbNotepad.Focus();
                         rtbNotepad.Select(i, length1);
-                        System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
-                        System.Drawing.FontStyle newFont = currentFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
-                        newFont |= currentFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
-                        newFont |= currentFont.Underline == false ? FontStyle.Underline : FontStyle.Regular;
+
+                        System.Drawing.Font startFont = rtbNotepad.SelectionFont;
+
+                        System.Drawing.FontStyle newFont = currentFont.Underline == false ? FontStyle.Underline : FontStyle.Regular;
+
+                        newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
+                        newFont |= startFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
+                        
 
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                     newFont);
