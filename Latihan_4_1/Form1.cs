@@ -111,8 +111,12 @@ namespace Latihan_4_1
                     }
                     if (rtbNotepad.SelectionLength == 0)
                     {
+                        System.Drawing.FontStyle newFont = btnBold.Checked ? FontStyle.Bold : FontStyle.Regular;
+                        newFont |= btnItalic.Checked ? FontStyle.Italic : FontStyle.Regular;
+                        newFont |= btnUnderline.Checked ? FontStyle.Underline : FontStyle.Regular;
+
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
-                        FontStyle.Bold);
+                        newFont);
                     }
                     
                 }
@@ -157,8 +161,12 @@ namespace Latihan_4_1
                     }
                     if (rtbNotepad.SelectionLength == 0)
                     {
+                        System.Drawing.FontStyle newFont = btnItalic.Checked ? FontStyle.Italic : FontStyle.Regular;
+                        newFont |= btnBold.Checked ? FontStyle.Bold : FontStyle.Regular;
+                        newFont |= btnUnderline.Checked ? FontStyle.Underline : FontStyle.Regular;
+
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
-                        FontStyle.Italic);
+                        newFont);
                     }
                 }
                 else if (sfont == "underline")
@@ -204,8 +212,12 @@ namespace Latihan_4_1
                     }
                     if (rtbNotepad.SelectionLength == 0)
                     {
+                        System.Drawing.FontStyle newFont = btnUnderline.Checked ? FontStyle.Underline : FontStyle.Regular;
+                        newFont |= btnBold.Checked ? FontStyle.Bold : FontStyle.Regular;
+                        newFont |= btnItalic.Checked ? FontStyle.Italic : FontStyle.Regular;
+
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
-                        FontStyle.Underline);
+                        newFont);
                     }
                 }
                 rtbNotepad.Focus();
