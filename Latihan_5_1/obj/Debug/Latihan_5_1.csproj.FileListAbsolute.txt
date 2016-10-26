@@ -1,0 +1,10 @@
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\bin\Debug\Latihan_3_1.exe.config
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_3_1.exe
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_3_1.pdb
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\bin\Debug\Latihan_3_1.exe
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\bin\Debug\Latihan_3_1.pdb
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_5_1.csprojResolveAssemblyReference.cache
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_5_1.Form1.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_3_1.Properties.Resources.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_5_1.csproj.GenerateResource.Cache
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_5_1\obj\Debug\Latihan_5_1.Editor.resources
