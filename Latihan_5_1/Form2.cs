@@ -23,19 +23,19 @@ namespace Latihan_5_1
         {
             if (e.Node.Text == "BackgroundColor")
             {
-                cbxBackgroundColor.Show();
+                tabControl1.SelectedIndex = 1;
             }
             else
             {
-                cbxBackgroundColor.Hide();
+                tabControl1.SelectedIndex = 0;
             }
+            
         }
 
         private void Editor_Load(object sender, EventArgs e)
         {
-           
-            cbxBackgroundColor.Hide();
-
+            //cbxBackgroundColor.Hide();
+            
             if (treeView1.Nodes.Count < 1)
             {
                 treeView1.Nodes.Add("Theme");
@@ -55,7 +55,7 @@ namespace Latihan_5_1
                 this.cbxBackgroundColor.DrawItem += new DrawItemEventHandler(cbxBackgroundColor_DrawItem);
             }
         }
-
+        
         private void cbxBackgroundColor_DrawItem(object sender, DrawItemEventArgs e)
         {
             if (e.Index >= 0)
@@ -74,6 +74,8 @@ namespace Latihan_5_1
             }
             e.DrawFocusRectangle();
         }
+
+        
 
     }
 }

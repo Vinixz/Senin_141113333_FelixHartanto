@@ -244,7 +244,7 @@
         private System.Windows.Forms.ToolStripButton btnUnderline;
         private System.Windows.Forms.ToolStripComboBox cbFontFamily;
         private System.Windows.Forms.ToolStripComboBox cbFontColor;
-        private System.Windows.Forms.RichTextBox rtbNotepad;
+        private  System.Windows.Forms.RichTextBox rtbNotepad;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;

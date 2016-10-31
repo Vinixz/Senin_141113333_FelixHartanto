@@ -714,18 +714,31 @@ namespace Latihan_5_1
         }
 
         Editor f2;
+        string f2Color;
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (f2 == null)
+            
+            f2 = new Editor();
+            f2.MdiParent = this;
+            //f2 += new FormClosedEventArgs(f2_FormClosed);
+            f2.FormClosed += f2_FormClosed;
+            f2.Show();
+            rtbNotepad.Hide();
+            toolStrip1.Hide();
+            if (f2Color != null)
             {
-                f2 = new Editor();
-                // f2.MdiParent = this;
-                f2.ShowDialog();
+                f2.cbxBackgroundColor.Text = f2Color;
             }
-            else
-            { f2.ShowDialog(); }
+        }
+
+        void f2_FormClosed(object sender, FormClosedEventArgs e)
+        {
             rtbNotepad.BackColor = Color.FromName(f2.cbxBackgroundColor.Text);
             cbBackColor.Text = f2.cbxBackgroundColor.Text;
+            rtbNotepad.Show();
+            toolStrip1.Show();
+            f2Color = cbBackColor.Text;
+            f2.Hide();
         }
     }
 }
