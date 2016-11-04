@@ -72,6 +72,21 @@ namespace Latihan_3_1
                     System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     if (currentFont == null)
                     {
+                        int ff = 1;
+                        rtbNotepad.Select(rtbNotepad.SelectionStart, length1);
+                        System.Drawing.Font Fontc1 = rtbNotepad.SelectionFont;
+                        for (int i = ustart; i < ustart + ulength; i++)
+                        {
+                            rtbNotepad.Select(i, length1);
+                            System.Drawing.Font Fontc2 = rtbNotepad.SelectionFont;
+                            if (Fontc1.Bold != Fontc2.Bold)
+                            {
+                                ff = 0;
+                                break;
+                            }
+                        }
+                        System.Drawing.FontStyle newFont;
+                        newFont = ff == 0 ? FontStyle.Bold : FontStyle.Regular;
 
                         for (int i = ustart; i < ustart + ulength; i++)
                         {
@@ -79,7 +94,9 @@ namespace Latihan_3_1
                             rtbNotepad.Select(i, length1);
                             System.Drawing.Font startFont = rtbNotepad.SelectionFont;
 
-                            System.Drawing.FontStyle newFont = btnBold.Checked ? FontStyle.Regular : FontStyle.Bold;
+
+                            if (ff == 1)
+                            { newFont = startFont.Bold == false ? FontStyle.Bold : FontStyle.Regular; }
                             newFont |= startFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
                             newFont |= startFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
 
@@ -107,28 +124,44 @@ namespace Latihan_3_1
                     if (rtbNotepad.SelectionLength == 0)
                     {
                         System.Drawing.FontStyle newFont = btnBold.Checked ? FontStyle.Bold : FontStyle.Regular;
-                        newFont |= btnItalic.Checked  ? FontStyle.Italic : FontStyle.Regular;
+                        newFont |= btnItalic.Checked ? FontStyle.Italic : FontStyle.Regular;
                         newFont |= btnUnderline.Checked ? FontStyle.Underline : FontStyle.Regular;
 
                         rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                         newFont);
                     }
-
                 }
                 else if (sfont == "italic")
                 {
                     System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     if (currentFont == null)
                     {
+                        int ff = 1;
+                        rtbNotepad.Select(rtbNotepad.SelectionStart, length1);
+                        System.Drawing.Font Fontc1 = rtbNotepad.SelectionFont;
+                        for (int i = ustart; i < ustart + ulength; i++)
+                        {
+
+                            rtbNotepad.Select(i, length1);
+                            System.Drawing.Font Fontc2 = rtbNotepad.SelectionFont;
+                            if (Fontc1.Italic != Fontc2.Italic)
+                            {
+                                ff = 0;
+                                break;
+                            }
+                        }
+                        System.Drawing.FontStyle newFont;
+                        newFont = ff == 0 ? FontStyle.Italic : FontStyle.Regular;
+
                         for (int i = ustart; i < ustart + ulength; i++)
                         {
                             rtbNotepad.Focus();
                             rtbNotepad.Select(i, length1);
-
                             System.Drawing.Font startFont = rtbNotepad.SelectionFont;
 
-                            System.Drawing.FontStyle newFont = btnItalic.Checked ? FontStyle.Regular : FontStyle.Italic;
 
+                            if (ff == 1)
+                            { newFont = startFont.Italic == false ? FontStyle.Italic : FontStyle.Regular; }
                             newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
                             newFont |= startFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
 
@@ -146,7 +179,6 @@ namespace Latihan_3_1
                             System.Drawing.Font startFont = rtbNotepad.SelectionFont;
 
                             System.Drawing.FontStyle newFont = currentFont.Italic == false ? FontStyle.Italic : FontStyle.Regular;
-
                             newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
                             newFont |= startFont.Underline == true ? FontStyle.Underline : FontStyle.Regular;
 
@@ -169,18 +201,34 @@ namespace Latihan_3_1
                     System.Drawing.Font currentFont = rtbNotepad.SelectionFont;
                     if (currentFont == null)
                     {
+                        int ff = 1;
+                        rtbNotepad.Select(rtbNotepad.SelectionStart, length1);
+                        System.Drawing.Font Fontc1 = rtbNotepad.SelectionFont;
+                        for (int i = ustart; i < ustart + ulength; i++)
+                        {
+
+                            rtbNotepad.Select(i, length1);
+                            System.Drawing.Font Fontc2 = rtbNotepad.SelectionFont;
+                            if (Fontc1.Underline != Fontc2.Underline)
+                            {
+                                ff = 0;
+                                break;
+                            }
+                        }
+                        System.Drawing.FontStyle newFont;
+                        newFont = ff == 0 ? FontStyle.Underline : FontStyle.Regular;
+
                         for (int i = ustart; i < ustart + ulength; i++)
                         {
                             rtbNotepad.Focus();
                             rtbNotepad.Select(i, length1);
-
                             System.Drawing.Font startFont = rtbNotepad.SelectionFont;
 
-                            System.Drawing.FontStyle newFont = btnUnderline.Checked ? FontStyle.Regular : FontStyle.Underline;
 
+                            if (ff == 1)
+                            { newFont = startFont.Underline == false ? FontStyle.Underline : FontStyle.Regular; }
                             newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
                             newFont |= startFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
-
 
                             rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                         newFont);
@@ -194,12 +242,9 @@ namespace Latihan_3_1
                             rtbNotepad.Select(i, length1);
 
                             System.Drawing.Font startFont = rtbNotepad.SelectionFont;
-
                             System.Drawing.FontStyle newFont = currentFont.Underline == false ? FontStyle.Underline : FontStyle.Regular;
-
                             newFont |= startFont.Bold == true ? FontStyle.Bold : FontStyle.Regular;
                             newFont |= startFont.Italic == true ? FontStyle.Italic : FontStyle.Regular;
-
 
                             rtbNotepad.SelectionFont = new Font(rtbNotepad.SelectionFont.FontFamily, rtbNotepad.SelectionFont.Size,
                         newFont);
