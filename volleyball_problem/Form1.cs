@@ -49,18 +49,17 @@ namespace volleyball_problem
             }
             return game;
         }
-
-        static long expo(long x, long exp_a)
+        static long expo(long x, long n)
         {
             long result = 1;
-            while (exp_a > 0)
+            while (n > 0)
             {
-                if (exp_a % 2 == 1)
+                if (n % 2 == 1)
                 {
                     result *= x;
                     result %= mod;
                 }
-                exp_a /= 2;
+                n /= 2;
                 x *= x;
                 x %= mod;
             }
@@ -69,12 +68,13 @@ namespace volleyball_problem
 
         private void btn_Hitung_Click(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(tb_A.Text);
-            int b = Convert.ToInt32(tb_B.Text); 
+            int a = Convert.ToInt32(Txt1.Text);
+            int b = Convert.ToInt32(Txt2.Text);
 
+            double hasil;
             int temp;
             long result;
-  
+
             if (a < b)
             {
                 temp = a;
@@ -85,25 +85,26 @@ namespace volleyball_problem
             {
                 if (b < 1)
                 {
-                    tb_Hasil.Text = "1";
+                    TxtHasil.Text = "1";
                 }
                 else
                 {
                     result = (long)pascal(a - 1, b);
-                    tb_Hasil.Text = result.ToString();
+                    TxtHasil.Text = result.ToString();
                 }
             }
             else if (a > 25 && b == a - 2)
             {
                 result = (long)pascal(24, 24);
-                int exp_a = b - 24;
-                result *= expo(2, exp_a);
+                int n = b - 24;
+                //hasil = (double) result;
+                result *= expo(2, n);
                 result %= mod;
-                tb_Hasil.Text = result.ToString();
+                TxtHasil.Text = result.ToString();
             }
             else
             {
-                tb_Hasil.Text = "0";
+                TxtHasil.Text = "0";
             }
         }
     }
