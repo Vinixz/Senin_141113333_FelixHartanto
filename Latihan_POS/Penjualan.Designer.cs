@@ -160,6 +160,7 @@
             this.txt_brg_Kode.Name = "txt_brg_Kode";
             this.txt_brg_Kode.Size = new System.Drawing.Size(132, 22);
             this.txt_brg_Kode.TabIndex = 29;
+            this.txt_brg_Kode.TextChanged += new System.EventHandler(this.txt_brg_Kode_TextChanged);
             // 
             // txt_brg_Nama
             // 
@@ -194,6 +195,7 @@
             this.txt_cust_ID.Name = "txt_cust_ID";
             this.txt_cust_ID.Size = new System.Drawing.Size(132, 22);
             this.txt_cust_ID.TabIndex = 7;
+            this.txt_cust_ID.TextChanged += new System.EventHandler(this.txt_cust_ID_TextChanged);
             // 
             // label2
             // 

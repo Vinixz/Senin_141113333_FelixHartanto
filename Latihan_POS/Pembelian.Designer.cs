@@ -142,6 +142,7 @@
             this.txt_brg_Kode.Name = "txt_brg_Kode";
             this.txt_brg_Kode.Size = new System.Drawing.Size(132, 22);
             this.txt_brg_Kode.TabIndex = 29;
+            this.txt_brg_Kode.TextChanged += new System.EventHandler(this.txt_brg_Kode_TextChanged);
             // 
             // txt_brg_Nama
             // 
@@ -176,6 +177,7 @@
             this.txt_supp_ID.Name = "txt_supp_ID";
             this.txt_supp_ID.Size = new System.Drawing.Size(132, 22);
             this.txt_supp_ID.TabIndex = 7;
+            this.txt_supp_ID.TextChanged += new System.EventHandler(this.txt_supp_ID_TextChanged);
             // 
             // label2
             // 

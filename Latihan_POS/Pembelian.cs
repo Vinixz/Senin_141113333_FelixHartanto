@@ -121,26 +121,43 @@ namespace Latihan_POS
 
         private void btn_brg_Tambah_Click(object sender, EventArgs e)
         {
-            cart_temp = clsBarang.SearchKode(txt_brg_Kode.Text);
-           
-            DataGridViewRow row = (DataGridViewRow)dgvPembelian.Rows[0].Clone();
-            row.Cells[0].Value = txt_brg_Kode.Text;
-            row.Cells[1].Value = txt_brg_Nama.Text;
-            row.Cells[2].Value = txt_brg_Harga.Text;
-            row.Cells[3].Value = txt_brg_Jumlah.Text;
-            row.Cells[4].Value = (Convert.ToDecimal(txt_brg_Harga.Text) * Convert.ToInt32(txt_brg_Jumlah.Text)).ToString();
-
-            dgvPembelian.Rows.Add(row);
-            cart_price += Convert.ToDecimal(txt_brg_Harga.Text) * Convert.ToInt32(txt_brg_Jumlah.Text);
-            txt_TotalHarga.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(cart_price.ToString()));
-
-            cart_temp = clsBarang.SearchKode(txt_brg_Kode.Text);
-            if (cart_temp != null)
+            try
             {
-                Array.Resize<clsBarang>(ref cart, cart.Length + 1);
-                cart[cart.Length - 1] = cart_temp;
+                if (txt_brg_Jumlah.Text.Trim().Length == 0 || txt_brg_Nama.Text.Trim().Length == 0)
+                {
+                    throw new Exception("Input Nama dan Jumlah Barang tidak boleh kosong");
+                }
+                cart_temp = clsBarang.SearchKode(txt_brg_Kode.Text);
+
+                if (cart_temp.jumlah > Convert.ToInt32(txt_brg_Jumlah.Text))
+                {
+                    DataGridViewRow row = (DataGridViewRow)dgvPembelian.Rows[0].Clone();
+                    row.Cells[0].Value = txt_brg_Kode.Text;
+                    row.Cells[1].Value = txt_brg_Nama.Text;
+                    row.Cells[2].Value = txt_brg_Harga.Text;
+                    row.Cells[3].Value = txt_brg_Jumlah.Text;
+                    row.Cells[4].Value = (Convert.ToDecimal(txt_brg_Harga.Text) * Convert.ToInt32(txt_brg_Jumlah.Text)).ToString();
+
+                    dgvPembelian.Rows.Add(row);
+                    cart_price += Convert.ToDecimal(txt_brg_Harga.Text) * Convert.ToInt32(txt_brg_Jumlah.Text);
+                    txt_TotalHarga.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(cart_price.ToString()));
+
+                    cart_temp = clsBarang.SearchKode(txt_brg_Kode.Text);
+                    if (cart_temp != null)
+                    {
+                        Array.Resize<clsBarang>(ref cart, cart.Length + 1);
+                        cart[cart.Length - 1] = cart_temp;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Barang tidak mencukupi", "Error");
+                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void btn_brg_Reset_Click(object sender, EventArgs e)
@@ -167,6 +184,10 @@ namespace Latihan_POS
             supp_temp = clsSupplier.Search(txt_supp_ID.Text);
             try
             {
+                if (txt_supp_Nama.Text.Trim().Length == 0 || txt_brg_KodeBeli.Text.Trim().Length == 0)
+                {
+                    throw new Exception("Input ID dan Nama Customer tidak boleh kosong");
+                }
                 clsPembelian beli_brg = new clsPembelian(Convert.ToInt32(txt_brg_KodeBeli.Text), supp_temp, Convert.ToDecimal(cart_price), DateTime.Now, DateTime.Now);
 
                 int res = beli_brg.Insert();
@@ -197,7 +218,7 @@ namespace Latihan_POS
                     no++;
 
                 }
-                MessageBox.Show(res + " produk barang telah berhasil dijual", "Saved");
+                MessageBox.Show("produk barang telah berhasil dibeli", "Saved");
             }
             catch (Exception ex)
             {
@@ -212,6 +233,18 @@ namespace Latihan_POS
                 dtList_Detail.Clear();
                 clsPembelian_Detail.SelectByID(Convert.ToInt32(dgvList.Rows[e.RowIndex].Cells[1].Value)).Fill(dtList_Detail);
             }
+        }
+
+        private void txt_supp_ID_TextChanged(object sender, EventArgs e)
+        {
+            txt_supp_Nama.Text = "";
+        }
+
+        private void txt_brg_Kode_TextChanged(object sender, EventArgs e)
+        {
+            txt_brg_Nama.Text = "";
+            txt_brg_Harga.Text = "";
+            txt_brg_Jumlah.Text = "";
         }
 
         
