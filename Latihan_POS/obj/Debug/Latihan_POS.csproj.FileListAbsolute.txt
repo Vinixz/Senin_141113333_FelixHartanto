@@ -2,9 +2,15 @@ C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_PO
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\bin\Debug\Latihan_POS.exe
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\bin\Debug\Latihan_POS.pdb
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.csprojResolveAssemblyReference.cache
-C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Daftar_Barang.resources
-C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Form1.resources
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Properties.Resources.resources
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.csproj.GenerateResource.Cache
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.exe
 C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.pdb
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Delete_Barang.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Registrasi_Barang.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Barang.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Menu.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Customer.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Supplier.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Penjualan.resources
+C:\Users\FELIXHT\Desktop\TugasFramework\Senin_141113333_FelixHartanto\Latihan_POS\obj\Debug\Latihan_POS.Pembelian.resources

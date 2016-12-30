@@ -1,6 +1,6 @@
 ﻿namespace Latihan_POS
 {
-    partial class Daftar_Barang
+    partial class Registrasi_Barang
     {
         /// <summary>
         /// Required designer variable.
@@ -193,7 +193,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Daftar_Barang";
-            this.Text = "Daftar_Barang";
+            this.Text = "Registrasi Barang";
             this.Load += new System.EventHandler(this.Daftar_Barang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

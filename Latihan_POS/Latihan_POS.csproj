@@ -46,25 +46,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Daftar_Barang.cs">
+    <Compile Include="Barang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Daftar_Barang.Designer.cs">
-      <DependentUpon>Daftar_Barang.cs</DependentUpon>
+    <Compile Include="Barang.Designer.cs">
+      <DependentUpon>Barang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Class\clsBarang.cs" />
+    <Compile Include="Class\clsCustomer.cs" />
+    <Compile Include="Class\clsDatabase.cs" />
+    <Compile Include="Class\clsPembelian.cs" />
+    <Compile Include="Class\clsPembelian_Detail.cs" />
+    <Compile Include="Class\clsPenjualan.cs" />
+    <Compile Include="Class\clsPenjualan_Detail.cs" />
+    <Compile Include="Class\clsSupplier.cs" />
+    <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Barang.Designer.cs">
+      <DependentUpon>Delete_Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan.Designer.cs">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrasi_Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrasi_Barang.Designer.cs">
+      <DependentUpon>Registrasi_Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Daftar_Barang.resx">
-      <DependentUpon>Daftar_Barang.cs</DependentUpon>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian.Designer.cs">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Barang.resx">
+      <DependentUpon>Barang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Barang.resx">
+      <DependentUpon>Delete_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan.resx">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrasi_Barang.resx">
+      <DependentUpon>Registrasi_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +131,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian.resx">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

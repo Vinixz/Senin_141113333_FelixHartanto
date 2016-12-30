@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //using System.Data.SqlClient;
+
+using System.Collections;
 using MySql.Data.MySqlClient;
 
 namespace Latihan_POS
 {
-    public partial class Daftar_Barang : Form
+    public partial class Registrasi_Barang : Form
     {
-        public Daftar_Barang()
+        public Registrasi_Barang()
         {
             InitializeComponent();
         }
@@ -53,7 +55,7 @@ namespace Latihan_POS
             {
                 con.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                //con.Close();
                 MessageBox.Show("Saved");
             }
             catch (Exception es)
@@ -66,5 +68,6 @@ namespace Latihan_POS
         {
             this.Close();
         }
+
     }
 }
